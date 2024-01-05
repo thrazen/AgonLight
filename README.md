@@ -6,3 +6,4 @@ LOAD "WIZ.BAS"
 RUN
 
 Happy dungeoning
+Oh... it's got a highscore table now.
