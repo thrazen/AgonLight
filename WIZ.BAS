@@ -246,9 +246,6 @@
 2200 BF=0
 2205 PRINT
 2210 INPUT "ENTER YOUR COMMAND : ";O$
-2211 REM *************************************************************
-2212 ST=18 : DX=18 : IQ=18
-2213 REM *************************************************************
 2215 IF LEFT$(O$,2)="DR" GOTO 2870
 2220 O$=LEFT$(O$,1)
 2225 IF O$="N" GOTO 2435
@@ -319,16 +316,13 @@
 2550 FOR X=1 TO 8
 2555 FOR Y=1 TO 8
 2560 COLOUR 1 : Q=L(FND(Z))
-2565 IF Q>99 THEN Q=Q-100 : REM Q=34 : REM LET Q=Q-100 TO SHOW ROOMS
-2566 REM ************************************************************
+2565 IF Q>99 THEN Q=34 : REM LET Q=Q-100 TO SHOW ROOMS
 2570 IF X=A AND Y=B THEN COLOUR 2 : PRINT "<";I$(Q);">  "; : GOTO 2580
 2575 PRINT " ";I$(Q);"   ";
 2580 NEXT Y
 2585 PRINT
 2590 PRINT
 2595 NEXT X
-2596 REM ************************************************************
-2597 PRINT "RUNESTAFF: ";R(1);" ";R(2);" ";R(3)
 2600 X=A : Y=B : COLOUR 3
 2605 GOTO 2725
 2610 PRINT ") LEVEL";Z
